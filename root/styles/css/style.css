@@ -1,3 +1,32 @@
+:root{
+  --dark: #1F2124;
+  --white: #F8FAFF;
+  --blue1: #9DC8C8;
+  --blue2: #58C9B9;
+  --blue3: #519D9E;
+  --purple: #D1B6E1;
+}
+
 body{
     font-family: 'Roboto', serif;
+}
+
+.border-dark{
+    border-color: var(--dark) !important;
+}
+
+.bg-primary{
+    background-color: var(--blue3) !important;
+}
+
+.bg-secondary{
+    background-color: var(--purple) !important;
+}
+
+.bg-light{
+    background-color: var(--blue1) !important;
+}
+
+.article{
+    object-fit: cover;
 }

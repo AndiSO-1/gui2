@@ -7,8 +7,8 @@
     <script src="../scripts/fontawesome.min.js" defer></script>
     <script src="../scripts/vue.js" defer></script>
     <script src="../scripts/db.js" defer></script>
-    
-    <script src="../scripts/home.js" defer></script>
+
+    <script src="../scripts/articles.js" defer></script>
     <title>CLO</title>
 </head>
 <body>
@@ -56,7 +56,18 @@
             </div>
         </div>
     </nav>
-    <div class="">
+
+    <div class="container">
+        
+        <div class="container-fluid">
+            <div class="row">
+                <display-item
+                v-for="article in articles"
+                v-bind:item="article"
+                v-bind:key="article.id"
+                ></display-item>
+            </div>
+        </div>
 
     </div>
 </body>
