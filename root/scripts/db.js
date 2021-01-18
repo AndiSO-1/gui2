@@ -14,7 +14,7 @@ const articles = [
 		id: 1,
 		title: "T-Shirt nike 2",
 		likes: 10,
-		colors: ["E1C21C", "E11C1C", "698E35"],
+		colors: ["E1C21C", "E11C1C"],
 		prom: 50,
 		price: 100.10,
 		sizes: ["XS", "S", "L"],

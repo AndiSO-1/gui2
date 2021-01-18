@@ -15,9 +15,17 @@ body{
     border-color: var(--dark) !important;
 }
 
-.bg-primary{
+.bg-primary, .btn-primary{
     background-color: var(--blue3) !important;
 }
+
+.btn-primary{
+    border-color: var(--blue3) !important;
+}
+
+/* .btn-primary:focus, .btn-primary:hover{
+    box-shadow: 0 0 0 .2rem red;
+} */
 
 .bg-secondary{
     background-color: var(--purple) !important;
@@ -29,4 +37,9 @@ body{
 
 .article{
     object-fit: cover;
+}
+
+.article-color{
+    height: 1.5rem;
+    width: 1.5rem;
 }

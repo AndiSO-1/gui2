@@ -1,0 +1,105 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" type='text/css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../styles/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="../scripts/fontawesome.min.js" defer></script>
+    <script src="../scripts/vue.js" defer></script>
+    <script src="../scripts/db.js" defer></script>
+
+    <script src="../scripts/article.js" defer></script>
+    <title>CLO</title>
+</head>
+<body>
+    <nav class="mb-4">
+        <div class="navbar navbar-expand-lg navbar-light bg-primary border-bottom border-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand mr-auto" href="home.html">CLO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="articles.html">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Panier</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Se connecter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-expand navbar-light bg-light border-bottom border-dark">
+            <div class="container-fluid">
+                <ul class="mx-auto navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nouveautés</a>
+                    </li>
+                    <span class="nav-item border-end border-dark"></span>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Vêtements</a>
+                    </li>
+                    <span class="nav-item border-end border-dark"></span>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Promotions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col p-2">
+                    <div class="d-flex justify-content-end">
+                        <div class="card p-2">
+                            <img v-bind:src="currentArticle.img" class="w-100" style="max-width: 600px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col p-2 d-flex ">
+                    <div class="d-flex flex-column justify-content-start">
+                        <div class="border border-dark bg-primary p-2 mb-2">
+                            {{ currentArticle.title }}
+                        </div>
+                        <div class="d-flex my-2">
+                            <display-color
+                            v-for="color in currentArticle.colors"
+                            v-bind:item="color"
+                            ></display-color>
+                        </div>
+                        <div class="d-flex border border-dark my-2">
+                            <display-size
+                            v-for="size in currentArticle.sizes"
+                            v-bind:item="size"
+                            ></display-size>
+                            <span class="ms-2">Taille</span>
+                        </div>
+                        <div class="my-2">
+                            {{ currentArticle.price }} $
+                        </div>
+                        <div class="my-2">
+                            <button class="btn btn-primary" type="button">Ajouter au panier</button>
+                            <button class="btn btn-primary" type="button">Like <i class="fas fa-heart text-danger"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
