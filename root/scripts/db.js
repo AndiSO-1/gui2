@@ -78,6 +78,21 @@ const articles = [
     }
 ];
 
+const baskets = [
+	{
+		article_id: 1,
+		color: "E1C21C",
+		size: "XS",
+		price: 100.10,
+	},
+	{
+		article_id: 5,
+		color: "E11C1C",
+		size: "S",
+		price: 100.10,
+	},
+]
+
 const users = [
 	{
 		id: 0,
