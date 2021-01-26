@@ -93,7 +93,7 @@
                         </div>
                         <div class="my-2">
                             <button class="btn btn-primary" type="button">Ajouter au panier</button>
-                            <button class="btn btn-primary" type="button">Like <i class="fas fa-heart text-danger"></i></button>
+                            <button class="btn btn-primary" type="button" v-on:click="addLikes">Like {{ currentArticle.likes }} <i class="fas fa-heart text-danger"></i></button>
                         </div>
                     </div>
                 </div>

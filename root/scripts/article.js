@@ -20,8 +20,15 @@ var app = new Vue({
         articles
     },
     computed: {
+        // Récupère les infos de l'artice actuellement sur la page
         currentArticle: function () {
             return this.articles.find(x => x.id == articleId)
-        }
+        },
+    },
+    methods: {
+        // Ajoute un like à l'article
+        addLikes: function () {
+            this.articles.find(x => x.id == articleId).likes++;
+        },
     }
 });
